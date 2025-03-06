@@ -1,0 +1,64 @@
+:root {
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 22px;
+    --font-small: 16px;
+    --font-micro: 14px;
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+    --size-border-radius: 4px;
+}
+
+.open-sans-600 {
+    font-family: "Open Sans-600", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+
+.logo > a{
+    text-decoration: none;
+    color: black;
+}
+
+.left > p {
+    font-family: "Open Sans-600";
+}
+
+.menu {
+    display: flex;
+    margin: 0 16px;
+}
+
+.menu_item {
+    padding: 8px 12px;
+    font-family: "Open Sans-600";
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: all 0.5s;
+}
+
+.menu_item:hover {
+    background-color: black;
+    color: white;
+}
