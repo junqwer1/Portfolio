@@ -2,44 +2,246 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Porfolio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <title>My Porfolio</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"/></svg>
-            <a href="#">오준학</a>
-        </div>
-        <div class="right">
-            <ul class="menu">
-                <li class="menu_item" link="#home">
-                    Home
-                </li>
-                <li class="menu_item" link="#about_me">
-                    About
-                </li>
-                <li class="menu_item" link="#skills">
-                    Skills
-                </li>
-                <li class="menu_item" link="#education">
-                    Education
-                </li>
-                <li class="menu_item" link="#project">
-                    Project
-                </li>
-                <li class="menu_item" link="#contact">
-                    Contact
-                </li>
-            </ul>
-        </div>
+        <nav class="_header">
+            <div class="logo">
+                <a href="#">오준학</a>
+            </div>
+            <div class="right">
+                <ul class="navbar_menu">
+                    <li class="navbar_menu_item" data-link="#home">
+                            Home
+                    </li>
+                    <li class="navbar_menu_item" data-link="#about">
+                        About
+                    </li>
+                    <li class="navbar_menu_item" data-link="#education">
+                        Education
+                    </li>
+                    <li class="navbar_menu_item" data-link="#certification">
+                        Certification
+                    </li>
+                    <li class="navbar_menu_item" data-link="#skills">
+                        Skills
+                    </li>
+                    <li class="navbar_menu_item" data-link="#project">
+                        Project
+                    </li>
+                    <li class="navbar_menu_item" data-link="#contact">
+                        Contact
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section id="home">
+        </section>
+        <section id="about" class="section">
+            <div class="section-container">
+                <section id="about_me" class="card">
+                    <h1 class="title">About Me</h1>
+                    <div class="about_container">
+                        <div class="about_left">
+                            <img src="photo/cloud.jpg" alt="" class="about_img">
+                        </div>
+                        <p class="about_right">
+                            안녕하세요. 신입 개발자 오준학입니다.<br>
+                            고등학교부터 개발자의 꿈을 가지게 되었고 3학년 때 위탁을 하게되며 개발자의 길을 밟게 되었습니다.<br>
+                            학교와 학원을 통해 HTML, CSS, JavaScript 같은 프론트엔드와 Java, Spring, Oracle DB 등 백엔드 개발 경험을 쌓으며 배운 지식을 토대로 프로젝트에 적용했습니다.<br>
+                            배운 기술들을 잊지 않고 기초를 다지며 학습하고 발전하는 개발자가 되겠습니다.
+                        </p>
+                    </div>
+                </section>
+                <section id="education" class="card">
+                    <h1 class="title">Education</h1>
+                    <table class="education_table">
+                        <thead>
+                            <tr>
+                                <th>기간</th>
+                                <th>학교, 학원</th>
+                                <th>졸업 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    2024.09 ~ 2025.02
+                                </td>
+                                <td>
+                                    코리아IT 아카데미 - AI(인공지능)활용 핀테크서비스 개발자 양성과정
+                                </td>
+                                <td>
+                                    수료
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2021.03 ~ 
+                                </td>
+                                <td>
+                                    폴리텍대학교 - AI융합소프트웨어
+                                </td>
+                                <td>
+                                    휴학
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2019.03 ~ 2019.12
+                                </td>
+                                <td>
+                                    인천직업능력교육원 - 정보처리기능사 취득 및 디지털 컨버전스(응용SW)양성과정
+                                </td>
+                                <td>
+                                    수료
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="certification" class="card">
+                    <h1 class="title">Certification</h1>
+                    <div class="certification_container">
+                        <div class="certication">
+                            <div class="certification_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></svg>
+                            </div>
+                            <div>
+                                <h2 class="certification_title">자격증</h2>
+                                <p class="certification_description">정보처리산업기사</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="skills" class="card">
+                    <h1 class="title">Skills</h1>
+                    <div class="skills_container">
+                        <div class="front">
+                            <h2>Frontend</h2>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="html" src="photo/html.png" alt="">
+                                </div>
+                                <p>HTML</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="css" src="photo/css.png" alt="">
+                                </div>
+                                <p>CSS</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="javascript" src="photo/javascript.png" alt="">
+                                </div>
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="react" src="photo/react.png" alt="">
+                                </div>
+                                <p>React</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <h2>Backend</h2>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="java" src="photo/java.png" alt="">
+                                </div>
+                                <p>Java</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="spring" src="photo/spring.png" alt="">
+                                </div>
+                                <p>Spring</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="springboot" src="photo/springboot.png" alt="">
+                                </div>
+                                <p>Spring Boot</p>
+                            </div>
+                        </div>
+                        <div class="other">
+                            <h2>Other</h2>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="oracle" src="photo/oracle.png" alt="">
+                                </div>
+                                <p>Oracle</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="tomcat" src="photo/tomcat.png" alt="">
+                                </div>
+                                <p>Tomcat</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="awsec2" src="photo/awsec2.png" alt="">
+                                </div>
+                                <p>AWS EC2</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="intellij" src="photo/intellij.png" alt="">
+                                </div>
+                                <p>Intellij</p>
+                            </div>
+                            <div class="language">
+                                <div class="language_icon">
+                                    <img class="vscode" src="photo/vscode.png" alt="">
+                                </div>
+                                <p>Visual Studio Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="project" class="card">
+                    <h1 class="title">Project</h1>
+                    <div class="project_container">
+                        <div class="project_content">
+                            <a href="https://cis-pintech.onedu.blue/">
+                                <div class="img_content">
+                                </div>
+                                <div class="project_description">
+                                    <p>
+                                        Pintech 카드, 대출 추천 시스템
+                                    </p>
+                                    ID: user1@test.org<br>
+                                    PASS: _aA123456
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="contact">
+            <div class="email">
+                이메일: zzang12358@naver.com
+            </div>
+            <div class="github">
+                Github: <a href="https://github.com/junqwer1">https://github.com/junqwer1</a>
+            </div>
+            <div class="phone">
+                Phone: 010-9275-8943
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
